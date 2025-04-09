@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-public class Profile {
+public class User {
 
     @Id
     @GeneratedValue
