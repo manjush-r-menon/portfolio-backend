@@ -17,7 +17,10 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name
+                  name: firstname
+                  type: varchar(255)
+              - column:
+                  name: lastname
                   type: varchar(255)
               - column:
                   name: tagline

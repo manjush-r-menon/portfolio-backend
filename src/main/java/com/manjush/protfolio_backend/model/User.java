@@ -16,7 +16,8 @@ public class User {
     @GeneratedValue
     private UUID id;
 
-    private String name;
+    private String firstname;
+    private String lastname;
     private String tagline;
 
     @Column(length = 1000)

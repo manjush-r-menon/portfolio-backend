@@ -11,8 +11,11 @@ databaseChangeLog:
                   name: id
                   value: d290f1ee-6c54-4b01-90e6-d701748f0851
               - column:
-                  name: name
+                  name: firstname
                   value: Manjush
+              - column:
+                  name: lastname
+                  value: Menon
               - column:
                   name: tagline
                   value: Full Stack Developer
