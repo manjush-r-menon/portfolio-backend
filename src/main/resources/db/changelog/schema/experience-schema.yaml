@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-experience-table
+      author: manjush
+      preConditions:
+        - not:
+            - tableExists:
+                tableName: experience
+      changes:
+        - createTable:
+            tableName: experience
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: institute
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duration
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: details
+                  type: VARCHAR(2000)

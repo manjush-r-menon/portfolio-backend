@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-experience
+      author: manjush
+      context: local
+      changes:
+        - insert:
+            tableName: experience
+            columns:
+              - column:
+                  name: id
+                  value: e1111111-1111-1111-1111-111111111111
+              - column:
+                  name: type
+                  value: Work
+              - column:
+                  name: title
+                  value: Software Engineer
+              - column:
+                  name: institute
+                  value: Mindcurv
+              - column:
+                  name: duration
+                  value: Jan 2022 - Present
+              - column:
+                  name: details
+                  value: Working on modern web applications using React, TypeScript, and CommerceTools.
+
+        - insert:
+            tableName: experience
+            columns:
+              - column:
+                  name: id
+                  value: e2222222-2222-2222-2222-222222222222
+              - column:
+                  name: type
+                  value: Education
+              - column:
+                  name: title
+                  value: Bachelor of Technology
+              - column:
+                  name: institute
+                  value: XYZ University
+              - column:
+                  name: duration
+                  value: 2017 - 2021
+              - column:
+                  name: details
+                  value: Studied Computer Science and Engineering with a focus on web development.

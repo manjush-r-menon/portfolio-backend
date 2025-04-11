@@ -1,3 +1,19 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/01-create-users-table.yaml
+      file: db/changelog/schema/user-schema.yaml
+  - include:
+      file: db/changelog/schema/capability-schema.yaml
+  - include:
+      file: db/changelog/schema/experience-schema.yaml
+
+  - include:
+      file: db/changelog/data/local/user-dummy-data.yaml
+      context: local
+
+  - include:
+      file: db/changelog/data/local/capability-dummy-data.yaml
+      context: local
+
+  - include:
+      file: db/changelog/data/local/experience-dummy-data.yaml
+      context: local

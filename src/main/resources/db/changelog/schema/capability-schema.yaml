@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: manjush
+      preConditions:
+        onFail: HALT
+        not:
+          tableExists:
+            tableName: capability
+      changes:
+        - createTable:
+            tableName: capability
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+        - createTable:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: skills
+                  type: VARCHAR(255)
+        - addForeignKeyConstraint:
+            baseTableName: capability_skills
+            baseColumnNames: capability_id
+            referencedTableName: capability
+            referencedColumnNames: id
+            constraintName: fk_capability_skills
