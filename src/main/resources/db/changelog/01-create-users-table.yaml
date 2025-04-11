@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: manjush
+      preConditions:
+        - not:
+            - tableExists:
+                tableName: users
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: tagline
+                  type: varchar(255)
+              - column:
+                  name: introduction
+                  type: varchar(1000)
+              - column:
+                  name: description
+                  type: varchar(2000)
+              - column:
+                  name: profile_image_url
+                  type: varchar(255)
+              - column:
+                  name: resume_url
+                  type: varchar(255)
+
+  - changeSet:
+      id: 2
+      author: manjush
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: d290f1ee-6c54-4b01-90e6-d701748f0851
+              - column:
+                  name: name
+                  value: Manjush
+              - column:
+                  name: tagline
+                  value: Full Stack Developer
+              - column:
+                  name: introduction
+                  value: Hello! I'm Manjush, a passionate developer.
+              - column:
+                  name: description
+                  value: I love building clean and scalable web apps using modern technologies.
+              - column:
+                  name: profile_image_url
+                  value: https://example.com/profile.jpg
+              - column:
+                  name: resume_url
+                  value: https://example.com/resume.pdf
