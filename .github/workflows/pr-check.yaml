@@ -45,6 +45,6 @@ jobs:
       - name: Build with Maven
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/testdb
-          SPRING_DATASOURCE_USERNAME: postgres
-          SPRING_DATASOURCE_PASSWORD: password
+          SPRING_DATASOURCE_USERNAME: manjush
+          SPRING_DATASOURCE_PASSWORD: manjush@123
         run: mvn clean install
