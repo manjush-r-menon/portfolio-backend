@@ -18,7 +18,7 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: title
+                  name: skillIntro
                   type: VARCHAR(255)
         - createTable:
             tableName: capability_skills

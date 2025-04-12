@@ -16,7 +16,7 @@ public class Capability {
     @GeneratedValue
     private UUID id;
 
-    private String title;
+    private String skillIntro;
 
     @ElementCollection
     private List<String> skills;

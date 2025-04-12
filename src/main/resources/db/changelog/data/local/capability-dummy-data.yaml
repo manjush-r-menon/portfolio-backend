@@ -4,6 +4,7 @@ databaseChangeLog:
       author: manjush
       context: local
       changes:
+        # Capability 1
         - insert:
             tableName: capability
             columns:
@@ -11,8 +12,39 @@ databaseChangeLog:
                   name: id
                   value: 11111111-1111-1111-1111-111111111111
               - column:
-                  name: title
+                  name: skillIntro
                   value: Frontend Development
+
+        # Capability 1 Skills
+        - insert:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  value: 11111111-1111-1111-1111-111111111111
+              - column:
+                  name: skills
+                  value: React
+        - insert:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  value: 11111111-1111-1111-1111-111111111111
+              - column:
+                  name: skills
+                  value: TypeScript
+        - insert:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  value: 11111111-1111-1111-1111-111111111111
+              - column:
+                  name: skills
+                  value: CSS
+
+        # Capability 2
         - insert:
             tableName: capability
             columns:
@@ -20,19 +52,10 @@ databaseChangeLog:
                   name: id
                   value: 22222222-2222-2222-2222-222222222222
               - column:
-                  name: title
+                  name: skillIntro
                   value: Backend Development
 
-        - insert:
-            tableName: capability_skills
-            columns:
-              - column:
-                  name: capability_id
-                  value: 11111111-1111-1111-1111-111111111111
-              - column:
-                  name: skills
-                  value: React, TypeScript, CSS
-
+        # Capability 2 Skills
         - insert:
             tableName: capability_skills
             columns:
@@ -41,4 +64,22 @@ databaseChangeLog:
                   value: 22222222-2222-2222-2222-222222222222
               - column:
                   name: skills
-                  value: Node.js, Express, PostgreSQL
+                  value: Node.js
+        - insert:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  value: 22222222-2222-2222-2222-222222222222
+              - column:
+                  name: skills
+                  value: Express
+        - insert:
+            tableName: capability_skills
+            columns:
+              - column:
+                  name: capability_id
+                  value: 22222222-2222-2222-2222-222222222222
+              - column:
+                  name: skills
+                  value: PostgreSQL

@@ -32,10 +32,13 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: duration
-                  type: VARCHAR(255)
+                  name: duration_start
+                  type: date
                   constraints:
                     nullable: false
+              - column:
+                  name: duration_end
+                  type: date
               - column:
                   name: details
                   type: VARCHAR(2000)

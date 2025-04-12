@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Setter
@@ -20,10 +22,13 @@ public class Experience {
 
     private String title;
     private String institute;
-    private String duration;
+
+    @Column(name = "duration_start")
+    private LocalDate durationStart;
+
+    @Column(name = "duration_end")
+    private LocalDate durationEnd;
 
     @Column(length = 2000)
     private String details;
-
 }
-
